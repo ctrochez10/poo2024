@@ -3,20 +3,21 @@ package smartphone;
 
 
 public class Chip {
-    private Operador o1;
+    private Operador operador;
     public int numero;
     
-    Chip(Operador o1, int numero){
+    Chip(Operador operador, int numero){
         this.numero = numero;
-        this.o1 = o1;
+        this.operador = operador;
     }
 
-    public Operador getO1() {
-        return o1;
+    public String getOperador() {
+        return this.operador.nombre + " " +this.operador.pais;
+        
     }
 
-    public void setO1(Operador o1) {
-        this.o1 = o1;
+    public void setOperador(Operador operador) {
+        this.operador = operador;
     }
 
     public int getNumero() {
@@ -28,6 +29,6 @@ public class Chip {
     }
     
     public void mostrarInformacion(){
-        System.out.println("Operador: "+ o1+" Número: "+numero);
+        System.out.println("Operador: "+ operador+" Número: "+numero);
     }
 }

@@ -80,13 +80,15 @@ public class Smartphone {
     
     public void mostrarDatos(){
         System.out.println("Marca: "+this.marca.nombre);
-        System.out.println("País: "+this.marca.pais);
+        System.out.println("Pais: "+this.marca.pais);
         System.out.println("Modelo: "+this.modelo);
         System.out.println("Almacenamiento: "+this.almacenamiento +" Gb");
         System.out.println("RAM: "+this.ram+" Gb");
-        System.out.println("Batería: "+this.tamaniobateria);
-        System.out.println("Número Chip1: "+this.chip1.numero);
-        System.out.println("Número Chip2: "+this.chip2.numero);
+        System.out.println("Bateria: "+this.tamaniobateria);
+        System.out.println("Numero Chip1: "+this.chip1.numero);
+        System.out.println("Operador: "+this.chip1.getOperador());
+        System.out.println("Numero Chip2: "+this.chip2.numero);
+        System.out.println("Operador: "+this.chip2.getOperador());
         
     }
     
@@ -94,12 +96,10 @@ public class Smartphone {
     public static void main(String[] args) {
         Fabricante f1 = new Fabricante("Motorola","China");
         Operador o1 = new Operador("Claro","Honduras");
-        o1.setNombre("Claro");
-        o1.setPais("Honduras");
         Chip c1 = new Chip(o1,92390863);
         Chip c2 = new Chip(o1,96540266);
        
-        Smartphone s1 = new Smartphone(f1,"A2",128,12,4500,c1,c2);
+        Smartphone s1 = new Smartphone(f1,"A2",256,8,4500,c1,c2);
         
         s1.mostrarDatos();
         
